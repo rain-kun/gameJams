@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/zapsplat_horror_yeti_monster_footstep_single_heavy_008_41744.wav-c81bb2cfdc29fc370bc66ef5f5aef513.sample"
+
+[deps]
+
+source_file="res://Sfx/zapsplat_horror_yeti_monster_footstep_single_heavy_008_41744.wav"
+dest_files=[ "res://.import/zapsplat_horror_yeti_monster_footstep_single_heavy_008_41744.wav-c81bb2cfdc29fc370bc66ef5f5aef513.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

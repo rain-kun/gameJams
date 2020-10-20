@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/zapsplat_foley_paper_sheets_x3_construction_sugar_set_down_on_surface_002_42008.wav-7a250f34a77b9743fa6353dacd8b8a58.sample"
+
+[deps]
+
+source_file="res://Sfx/zapsplat_foley_paper_sheets_x3_construction_sugar_set_down_on_surface_002_42008.wav"
+dest_files=[ "res://.import/zapsplat_foley_paper_sheets_x3_construction_sugar_set_down_on_surface_002_42008.wav-7a250f34a77b9743fa6353dacd8b8a58.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

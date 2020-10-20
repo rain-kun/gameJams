@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/zapsplat_household_furniture_large_quality_wooden_sidebaord_door_open_inside_unit_pov_002_56592(1).wav-3866d4e883fca320620d4d070ba6e45a.sample"
+
+[deps]
+
+source_file="res://Sfx/zapsplat_household_furniture_large_quality_wooden_sidebaord_door_open_inside_unit_pov_002_56592(1).wav"
+dest_files=[ "res://.import/zapsplat_household_furniture_large_quality_wooden_sidebaord_door_open_inside_unit_pov_002_56592(1).wav-3866d4e883fca320620d4d070ba6e45a.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

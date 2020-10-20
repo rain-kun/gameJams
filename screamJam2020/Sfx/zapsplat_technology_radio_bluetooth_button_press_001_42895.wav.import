@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/zapsplat_technology_radio_bluetooth_button_press_001_42895.wav-c6b1b280d3eda9bae1ac86a8747f395d.sample"
+
+[deps]
+
+source_file="res://Sfx/zapsplat_technology_radio_bluetooth_button_press_001_42895.wav"
+dest_files=[ "res://.import/zapsplat_technology_radio_bluetooth_button_press_001_42895.wav-c6b1b280d3eda9bae1ac86a8747f395d.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

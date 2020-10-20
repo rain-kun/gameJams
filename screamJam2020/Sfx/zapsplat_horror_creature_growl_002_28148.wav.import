@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/zapsplat_horror_creature_growl_002_28148.wav-ce717db84928659bb639c678b66103f7.sample"
+
+[deps]
+
+source_file="res://Sfx/zapsplat_horror_creature_growl_002_28148.wav"
+dest_files=[ "res://.import/zapsplat_horror_creature_growl_002_28148.wav-ce717db84928659bb639c678b66103f7.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/skyclad_sound_impact_sound_design_wood_heavy_thump_clunk_reverb_resonant_001_131.wav-25bd18d76fb2f63395496a576a727df8.sample"
+
+[deps]
+
+source_file="res://Sfx/skyclad_sound_impact_sound_design_wood_heavy_thump_clunk_reverb_resonant_001_131.wav"
+dest_files=[ "res://.import/skyclad_sound_impact_sound_design_wood_heavy_thump_clunk_reverb_resonant_001_131.wav-25bd18d76fb2f63395496a576a727df8.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

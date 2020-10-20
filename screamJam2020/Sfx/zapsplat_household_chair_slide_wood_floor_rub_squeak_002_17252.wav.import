@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/zapsplat_household_chair_slide_wood_floor_rub_squeak_002_17252.wav-f1a7cee81e4e694b2e0460af13be82b8.sample"
+
+[deps]
+
+source_file="res://Sfx/zapsplat_household_chair_slide_wood_floor_rub_squeak_002_17252.wav"
+dest_files=[ "res://.import/zapsplat_household_chair_slide_wood_floor_rub_squeak_002_17252.wav-f1a7cee81e4e694b2e0460af13be82b8.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

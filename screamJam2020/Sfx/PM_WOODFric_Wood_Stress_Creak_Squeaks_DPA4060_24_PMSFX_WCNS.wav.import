@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/PM_WOODFric_Wood_Stress_Creak_Squeaks_DPA4060_24_PMSFX_WCNS.wav-3c946c434b35154085c1472c6311fe8d.sample"
+
+[deps]
+
+source_file="res://Sfx/PM_WOODFric_Wood_Stress_Creak_Squeaks_DPA4060_24_PMSFX_WCNS.wav"
+dest_files=[ "res://.import/PM_WOODFric_Wood_Stress_Creak_Squeaks_DPA4060_24_PMSFX_WCNS.wav-3c946c434b35154085c1472c6311fe8d.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

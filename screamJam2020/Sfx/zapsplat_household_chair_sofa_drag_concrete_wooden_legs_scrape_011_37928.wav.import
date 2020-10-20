@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/zapsplat_household_chair_sofa_drag_concrete_wooden_legs_scrape_011_37928.wav-32d9cfa71da205fb8842007199d47a4a.sample"
+
+[deps]
+
+source_file="res://Sfx/zapsplat_household_chair_sofa_drag_concrete_wooden_legs_scrape_011_37928.wav"
+dest_files=[ "res://.import/zapsplat_household_chair_sofa_drag_concrete_wooden_legs_scrape_011_37928.wav-32d9cfa71da205fb8842007199d47a4a.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

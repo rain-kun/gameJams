@@ -1,0 +1,117 @@
+[gd_scene load_steps=17 format=2]
+
+[ext_resource path="res://Scripts/Player/Player.gd" type="Script" id=1]
+[ext_resource path="res://Scripts/Player/PlayerStatemachine.gd" type="Script" id=2]
+[ext_resource path="res://Scripts/Tools/InteractableRaycast.gd" type="Script" id=3]
+[ext_resource path="res://Sfx/walking-on-a-wooden-floor-sound(1).wav" type="AudioStream" id=4]
+[ext_resource path="res://Scripts/Player/WalkingSounds.gd" type="Script" id=5]
+[ext_resource path="res://Sfx/walking-on-a-wooden-floor-sound(8).wav" type="AudioStream" id=6]
+[ext_resource path="res://Sfx/walking-on-a-wooden-floor-sound(2).wav" type="AudioStream" id=7]
+[ext_resource path="res://Sfx/walking-on-a-wooden-floor-sound(5).wav" type="AudioStream" id=8]
+[ext_resource path="res://Sfx/walking-on-a-wooden-floor-sound(9).wav" type="AudioStream" id=10]
+[ext_resource path="res://Sfx/walking-on-a-wooden-floor-sound(7).wav" type="AudioStream" id=11]
+[ext_resource path="res://Sfx/walking-on-a-wooden-floor-sound(3).wav" type="AudioStream" id=12]
+[ext_resource path="res://Sfx/walking-on-a-wooden-floor-sound(4).wav" type="AudioStream" id=13]
+
+[sub_resource type="CapsuleShape" id=1]
+radius = 0.2
+height = 0.8
+
+[sub_resource type="CapsuleMesh" id=2]
+radius = 0.2
+mid_height = 0.8
+
+[sub_resource type="Animation" id=5]
+resource_name = "free"
+
+[sub_resource type="Animation" id=4]
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Head/Camera:translation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0.2, 0.430752, 0.8, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector3( 0.1, 0.5, 0 ), Vector3( 0, 0.566411, 0 ), Vector3( -0.1, 0.5, 0 ), Vector3( 0, 0.566411, 0 ) ]
+}
+
+[node name="Player" type="KinematicBody" groups=[
+"Player",
+]]
+script = ExtResource( 1 )
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+transform = Transform( 1, 0, 0, 0, -1.62921e-07, -1, 0, 1, -1.62921e-07, 0, 0, 0 )
+shape = SubResource( 1 )
+
+[node name="MeshInstance" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, -1.62921e-07, -1, 0, 1, -1.62921e-07, 0, 0, 0 )
+mesh = SubResource( 2 )
+material/0 = null
+
+[node name="Head" type="Spatial" parent="."]
+
+[node name="Camera" type="Camera" parent="Head"]
+transform = Transform( 0.998782, 0.0348782, -0.0348995, -0.0348995, 0.999391, 0, 0.0348782, 0.00121797, 0.999391, 0, 0.566411, 0 )
+
+[node name="InteractableRaycast" type="RayCast" parent="Head/Camera"]
+enabled = true
+cast_to = Vector3( 0, 0, -2 )
+collision_mask = 2
+script = ExtResource( 3 )
+
+[node name="SpotLight" type="SpotLight" parent="Head/Camera"]
+spot_range = 6.15248
+spot_angle = 22.385
+
+[node name="SpotLight2" type="SpotLight" parent="Head/Camera"]
+light_color = Color( 0.964706, 0.964706, 0.937255, 1 )
+light_energy = 0.4
+spot_range = 7.11103
+spot_angle = 34.715
+
+[node name="PlayerStatemachine" type="Node" parent="."]
+script = ExtResource( 2 )
+
+[node name="WalkingSounds" type="Spatial" parent="."]
+script = ExtResource( 5 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="WalkingSounds"]
+stream = ExtResource( 4 )
+bus = "walking"
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="WalkingSounds"]
+stream = ExtResource( 7 )
+bus = "walking"
+
+[node name="AudioStreamPlayer3" type="AudioStreamPlayer" parent="WalkingSounds"]
+stream = ExtResource( 12 )
+bus = "walking"
+
+[node name="AudioStreamPlayer4" type="AudioStreamPlayer" parent="WalkingSounds"]
+stream = ExtResource( 13 )
+bus = "walking"
+
+[node name="AudioStreamPlayer5" type="AudioStreamPlayer" parent="WalkingSounds"]
+stream = ExtResource( 8 )
+bus = "walking"
+
+[node name="AudioStreamPlayer7" type="AudioStreamPlayer" parent="WalkingSounds"]
+stream = ExtResource( 11 )
+bus = "walking"
+
+[node name="AudioStreamPlayer8" type="AudioStreamPlayer" parent="WalkingSounds"]
+stream = ExtResource( 6 )
+bus = "walking"
+
+[node name="AudioStreamPlayer9" type="AudioStreamPlayer" parent="WalkingSounds"]
+stream = ExtResource( 10 )
+bus = "walking"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/free = SubResource( 5 )
+anims/walkShake = SubResource( 4 )

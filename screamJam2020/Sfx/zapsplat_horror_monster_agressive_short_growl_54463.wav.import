@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/zapsplat_horror_monster_agressive_short_growl_54463.wav-b2dc378eff7dad184cd2996912aa059c.sample"
+
+[deps]
+
+source_file="res://Sfx/zapsplat_horror_monster_agressive_short_growl_54463.wav"
+dest_files=[ "res://.import/zapsplat_horror_monster_agressive_short_growl_54463.wav-b2dc378eff7dad184cd2996912aa059c.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

@@ -1,0 +1,30 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://UI/horrorTheme.tres" type="Theme" id=1]
+[ext_resource path="res://Scripts/UI/Paper.gd" type="Script" id=2]
+
+[node name="Paper" type="Label"]
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+theme = ExtResource( 1 )
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -33.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Close" type="Button" parent="CenterContainer"]
+margin_right = 90.0
+margin_bottom = 33.0
+text = "Close"
+[connection signal="mouse_entered" from="CenterContainer/Close" to="." method="_on_Close_mouse_entered"]
+[connection signal="pressed" from="CenterContainer/Close" to="." method="_on_Close_pressed"]

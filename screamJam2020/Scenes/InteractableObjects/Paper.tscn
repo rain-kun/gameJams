@@ -1,0 +1,27 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Meshes/paper.mesh" type="ArrayMesh" id=1]
+[ext_resource path="res://Scripts/InteractableObjects/InteractablePaper.gd" type="Script" id=2]
+[ext_resource path="res://Scripts/InteractableObjects/Paper.gd" type="Script" id=3]
+[ext_resource path="res://Shaders/Paper.material" type="Material" id=4]
+[ext_resource path="res://Sfx/zapsplat_foley_paper_sheets_x3_construction_sugar_set_down_on_surface_002_42008.wav" type="AudioStream" id=5]
+
+[sub_resource type="ConcavePolygonShape" id=1]
+data = PoolVector3Array( 0.107, 0, 0.1481, -0.107, 0, -0.1481, 0.107, 0, -0.1481, 0.107, 0, 0.1481, -0.107, 0, 0.1481, -0.107, 0, -0.1481 )
+
+[node name="Paper" type="Spatial"]
+script = ExtResource( 3 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+
+[node name="StaticBody" type="RigidBody" parent="."]
+collision_layer = 2
+script = ExtResource( 2 )
+
+[node name="CollisionShape" type="CollisionShape" parent="StaticBody"]
+shape = SubResource( 1 )
+
+[node name="MeshInstance6" type="MeshInstance" parent="StaticBody"]
+mesh = ExtResource( 1 )
+material/0 = ExtResource( 4 )
