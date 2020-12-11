@@ -1,0 +1,34 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Scenes/UI/arrow.png" type="Texture" id=1]
+[ext_resource path="res://Scenes/UI/attack.png" type="Texture" id=2]
+[ext_resource path="res://Scenes/UI/esc.png" type="Texture" id=3]
+
+[node name="Control" type="Node2D"]
+
+[node name="TextureButton" type="TouchScreenButton" parent="."]
+position = Vector2( 42, 19 )
+normal = ExtResource( 1 )
+action = "ui_right"
+
+[node name="TextureButton2" type="TouchScreenButton" parent="."]
+position = Vector2( 39, 29 )
+rotation = 3.14159
+normal = ExtResource( 1 )
+action = "ui_left"
+
+[node name="TextureButton3" type="TouchScreenButton" parent="."]
+position = Vector2( -53, 29 )
+rotation = -1.5708
+normal = ExtResource( 1 )
+action = "ui_accept"
+
+[node name="TextureButton4" type="TouchScreenButton" parent="."]
+position = Vector2( 40, 6 )
+normal = ExtResource( 2 )
+action = "attack"
+
+[node name="TextureButton5" type="TouchScreenButton" parent="."]
+position = Vector2( -6, 22 )
+normal = ExtResource( 3 )
+action = "ui_cancel"

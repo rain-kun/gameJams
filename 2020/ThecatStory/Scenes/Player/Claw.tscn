@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Scenes/Player/catjam.png" type="Texture" id=1]
+[ext_resource path="res://Scripts/Player/Claw.gd" type="Script" id=2]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 2.39463
+
+[node name="Claw" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="."]
+rotation = -0.820305
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( -0.175522, 21.0947, 4.49792, 4.11239 )
+
+[node name="Detector" type="Area2D" parent="."]
+collision_layer = 4
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Detector"]
+shape = SubResource( 1 )
+
+[node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
+[connection signal="body_entered" from="Detector" to="." method="_on_Detector_body_entered"]
+[connection signal="screen_exited" from="VisibilityNotifier2D" to="." method="_on_VisibilityNotifier2D_screen_exited"]

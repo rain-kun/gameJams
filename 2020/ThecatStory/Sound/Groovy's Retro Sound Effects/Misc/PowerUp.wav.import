@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/PowerUp.wav-12b39dbbbffeeaf757b0adf9bb32775b.sample"
+
+[deps]
+
+source_file="res://Sound/Groovy's Retro Sound Effects/Misc/PowerUp.wav"
+dest_files=[ "res://.import/PowerUp.wav-12b39dbbbffeeaf757b0adf9bb32775b.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

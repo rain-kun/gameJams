@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Click6.wav-9e0febd66040fa2dc14d67058817c2d2.sample"
+
+[deps]
+
+source_file="res://Sound/Groovy's Retro Sound Effects/Click/Click6.wav"
+dest_files=[ "res://.import/Click6.wav-9e0febd66040fa2dc14d67058817c2d2.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

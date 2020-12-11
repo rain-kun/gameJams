@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/melodyloops-preview-jungle-journey-1m53s.ogg-1a14bf62236da79a324fe2305e5c89df.oggstr"
+
+[deps]
+
+source_file="res://Sound/BGSounds/melodyloops-preview-jungle-journey-1m53s.ogg"
+dest_files=[ "res://.import/melodyloops-preview-jungle-journey-1m53s.ogg-1a14bf62236da79a324fe2305e5c89df.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

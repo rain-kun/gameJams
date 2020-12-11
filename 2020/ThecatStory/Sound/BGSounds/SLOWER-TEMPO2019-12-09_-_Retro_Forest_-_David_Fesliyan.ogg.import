@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/SLOWER-TEMPO2019-12-09_-_Retro_Forest_-_David_Fesliyan.ogg-d0c66fae3177d205fc8d776eb237ef3d.oggstr"
+
+[deps]
+
+source_file="res://Sound/BGSounds/SLOWER-TEMPO2019-12-09_-_Retro_Forest_-_David_Fesliyan.ogg"
+dest_files=[ "res://.import/SLOWER-TEMPO2019-12-09_-_Retro_Forest_-_David_Fesliyan.ogg-d0c66fae3177d205fc8d776eb237ef3d.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

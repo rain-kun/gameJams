@@ -1,0 +1,30 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scenes/World/items/Sbone.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/World/items/Bbone.tscn" type="PackedScene" id=2]
+
+[node name="Tilese" type="Node2D"]
+
+[node name="Sbone" parent="." instance=ExtResource( 1 )]
+rotation = -0.762709
+
+[node name="Sbone2" parent="." instance=ExtResource( 1 )]
+rotation = 1.90415
+
+[node name="Sbone3" parent="." instance=ExtResource( 1 )]
+rotation = -2.79253
+
+[node name="Sbone4" parent="." instance=ExtResource( 1 )]
+rotation = -1.77675
+
+[node name="Bbone" parent="." instance=ExtResource( 2 )]
+rotation = -1.52367
+
+[node name="Bbone2" parent="." instance=ExtResource( 2 )]
+rotation = 2.15723
+
+[node name="Bbone3" parent="." instance=ExtResource( 2 )]
+rotation = -1.06465
+
+[node name="Bbone4" parent="." instance=ExtResource( 2 )]
+rotation = 3.30042

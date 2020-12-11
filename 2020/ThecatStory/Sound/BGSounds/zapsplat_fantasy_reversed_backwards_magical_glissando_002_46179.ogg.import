@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/zapsplat_fantasy_reversed_backwards_magical_glissando_002_46179.ogg-eee96f95d19963385894705b76f77d49.oggstr"
+
+[deps]
+
+source_file="res://Sound/BGSounds/zapsplat_fantasy_reversed_backwards_magical_glissando_002_46179.ogg"
+dest_files=[ "res://.import/zapsplat_fantasy_reversed_backwards_magical_glissando_002_46179.ogg-eee96f95d19963385894705b76f77d49.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

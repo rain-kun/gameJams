@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Scenes/Player/catjam.png" type="Texture" id=1]
+[ext_resource path="res://Scripts/Player/Health.gd" type="Script" id=2]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 2.42286
+
+[node name="Health" type="Area2D"]
+collision_layer = 4
+collision_mask = 4
+script = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0.0347695, -0.312926 )
+shape = SubResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0.70565, 25.0682, 5.52602, 3.72685 )
+[connection signal="body_entered" from="." to="." method="_on_Health_body_entered"]

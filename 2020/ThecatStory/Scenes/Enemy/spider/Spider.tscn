@@ -1,0 +1,31 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Scenes/Enemy/spider.png" type="Texture" id=1]
+[ext_resource path="res://Scenes/Enemy/spider/SpiderSLeg.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/Enemy/spider/SpiderBLeg.tscn" type="PackedScene" id=3]
+
+[node name="Spider" type="Node2D"]
+
+[node name="torso" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 549, 9, 158, 140 )
+
+[node name="SpiderBLeg" parent="torso" instance=ExtResource( 3 )]
+position = Vector2( 15, 0 )
+
+[node name="SpiderSLeg" parent="torso" instance=ExtResource( 2 )]
+position = Vector2( 15, 30 )
+
+[node name="SpiderBLeg2" parent="torso" instance=ExtResource( 3 )]
+position = Vector2( -20, 0 )
+scale = Vector2( -1, 1 )
+
+[node name="SpiderSLeg2" parent="torso" instance=ExtResource( 2 )]
+position = Vector2( -20, 30 )
+scale = Vector2( -1, 1 )
+
+[node name="Skeleton2D" type="Skeleton2D" parent="."]
+
+[node name="Bone2D" type="Bone2D" parent="Skeleton2D"]
+rest = Transform2D( 1, 0, 0, 1, 0, 0 )

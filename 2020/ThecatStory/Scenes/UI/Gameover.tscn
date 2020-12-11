@@ -1,0 +1,110 @@
+[gd_scene load_steps=18 format=2]
+
+[ext_resource path="res://Scripts/UI/Gameover.gd" type="Script" id=1]
+[ext_resource path="res://Scenes/UI/PlayCutscenes/frame0003.png" type="Texture" id=2]
+[ext_resource path="res://Scenes/UI/PlayCutscenes/frame0004.png" type="Texture" id=3]
+[ext_resource path="res://Scenes/UI/PlayCutscenes/frame0005.png" type="Texture" id=4]
+[ext_resource path="res://Scenes/UI/PlayCutscenes/frame0009.png" type="Texture" id=5]
+[ext_resource path="res://Scenes/UI/PlayCutscenes/frame0010.png" type="Texture" id=6]
+[ext_resource path="res://Scenes/UI/PlayCutscenes/frame0002.png" type="Texture" id=7]
+[ext_resource path="res://Scenes/UI/PlayCutscenes/frame0007.png" type="Texture" id=8]
+[ext_resource path="res://Scenes/UI/PlayCutscenes/frame0008.png" type="Texture" id=9]
+[ext_resource path="res://Scenes/UI/PlayCutscenes/frame0006.png" type="Texture" id=10]
+[ext_resource path="res://Scenes/UI/PlayCutscenes/frame0001.png" type="Texture" id=11]
+[ext_resource path="res://Scenes/UI/PlayCutscenes/frame0000.png" type="Texture" id=12]
+[ext_resource path="res://Sound/Groovy's Retro Sound Effects/Click/Click6.wav" type="AudioStream" id=14]
+[ext_resource path="res://Sound/Groovy's Retro Sound Effects/Random/Random3.wav" type="AudioStream" id=15]
+[ext_resource path="res://Scenes/UI/Button.tscn" type="PackedScene" id=16]
+[ext_resource path="res://A_cats_journey1.png" type="Texture" id=17]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 12 ) ],
+"loop": false,
+"name": "idel",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 12 ), ExtResource( 11 ), ExtResource( 7 ), ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 10 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 5 ), ExtResource( 6 ) ],
+"loop": false,
+"name": "sleep",
+"speed": 5.0
+} ]
+
+[node name="Gameover" type="Control"]
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+visible = false
+frames = SubResource( 1 )
+animation = "idel"
+
+[node name="Camera2D" type="Camera2D" parent="AnimatedSprite"]
+current = true
+zoom = Vector2( 0.1, 0.1 )
+
+[node name="Button" type="TextureButton" parent="."]
+margin_left = -25.8476
+margin_top = -0.521983
+margin_right = 17.1524
+margin_bottom = 19.478
+rect_scale = Vector2( 0.5, 0.5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Button"]
+stream = ExtResource( 14 )
+volume_db = -20.0
+
+[node name="Button2" type="TextureButton" parent="."]
+margin_left = 4.40393
+margin_top = -1.093
+margin_right = 47.4039
+margin_bottom = 18.907
+rect_scale = Vector2( 0.5, 0.5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Button2"]
+stream = ExtResource( 14 )
+volume_db = -20.0
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+position = Vector2( 8.39495, -7.0851 )
+stream = ExtResource( 15 )
+pitch_scale = 0.5
+attenuation = 0.287175
+
+[node name="Button3" parent="." instance=ExtResource( 16 )]
+position = Vector2( -15.47, 3.86344 )
+
+[node name="Button4" parent="." instance=ExtResource( 16 )]
+position = Vector2( 14.9435, 4.02138 )
+
+[node name="Sprite" type="Sprite" parent="."]
+z_index = -1
+texture = ExtResource( 17 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = -17.1524
+margin_top = -7.98244
+margin_right = 217.848
+margin_bottom = 6.01756
+rect_scale = Vector2( 0.160001, 0.2 )
+text = "Note:press right  and esc to unpause"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="animation_finished" from="AnimatedSprite" to="." method="_on_AnimatedSprite_animation_finished"]
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_Button2_pressed"]
+[connection signal="body_entered" from="Button3/Area2D" to="." method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="Button4/Area2D" to="." method="_on_Exit_body_entered"]
+
+[editable path="Button3"]
+
+[editable path="Button4"]

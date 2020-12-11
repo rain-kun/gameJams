@@ -1,0 +1,132 @@
+[gd_scene load_steps=17 format=2]
+
+[ext_resource path="res://Scenes/World/grasstileset.tres" type="TileSet" id=1]
+[ext_resource path="res://Scenes/Player/Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/UI/ui.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/World/stone2.png" type="Texture" id=5]
+[ext_resource path="res://Scenes/World/light.png" type="Texture" id=6]
+[ext_resource path="res://Scenes/World/items/NextLevel.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Scenes/World/items/powergem.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Scenes/World/items/lightgem.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Scenes/World/Stages/Stone.gd" type="Script" id=10]
+[ext_resource path="res://Sound/BGSounds/zapsplat_fantasy_reversed_backwards_magical_glissando_001_46178.ogg" type="AudioStream" id=11]
+[ext_resource path="res://Sound/BGSounds/zapsplat_fantasy_magical_musical_glisando_004_46176.ogg" type="AudioStream" id=12]
+[ext_resource path="res://Sound/BGSounds/zapsplat_fantasy_reversed_backwards_magical_glissando_002_46179.ogg" type="AudioStream" id=13]
+[ext_resource path="res://Scenes/World/BG/Bubbles.tscn" type="PackedScene" id=14]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 4, 2 )
+
+[sub_resource type="Animation" id=2]
+resource_name = "light"
+length = 5.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Light2D:energy")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 2.6 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 1.0, 2.0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("light:energy")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 2.6 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 1.0, 3.5 ]
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "show"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("Camera2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 2.9 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -16, 16 ), Vector2( 0, 0 ) ]
+}
+
+[node name="Stone" type="Node2D"]
+script = ExtResource( 10 )
+
+[node name="Sprite2" type="Sprite" parent="."]
+texture = ExtResource( 5 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+current = true
+zoom = Vector2( 0.1, 0.1 )
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 8, 8 )
+cell_custom_transform = Transform2D( 8, 0, 0, 8, 0, 0 )
+format = 1
+tile_data = PoolIntArray( -196620, 0, 0, -196619, 0, 1, -196618, 0, 1, -196617, 0, 2, -196616, 0, 1, -196615, 0, 2, -196614, 0, 1, -196613, 0, 3, -262140, 0, 0, -262139, 0, 1, -262138, 0, 2, -262137, 0, 2, -262136, 0, 2, -262135, 0, 1, -262134, 0, 2, -262133, 0, 1, -262132, 0, 3, -131084, 0, 65536, -131083, 0, 131073, -131082, 0, 65537, -131081, 0, 65538, -131080, 0, 131074, -131079, 0, 65538, -131078, 0, 65537, -131077, 0, 131075, -196604, 0, 131072, -196603, 0, 65537, -196602, 0, 65537, -196601, 0, 65538, -196600, 0, 131074, -196599, 0, 131074, -196598, 0, 131073, -196597, 0, 131074, -196596, 0, 131075, -65548, 0, 131072, -65547, 0, 131074, -65546, 0, 131074, -65545, 0, 65538, -65544, 0, 65537, -65543, 0, 131074, -65542, 0, 131074, -65541, 0, 65539, -131068, 0, 131072, -131067, 0, 131073, -131066, 0, 131073, -131065, 0, 65538, -131064, 0, 65538, -131063, 0, 131074, -131062, 0, 131073, -131061, 0, 131073, -131060, 0, 65539, -12, 0, 65536, -11, 0, 131074, -10, 0, 65537, -9, 0, 131074, -8, 0, 131074, -7, 0, 65537, -6, 0, 131074, -5, 0, 65539, -65532, 0, 131072, -65531, 0, 131073, -65530, 0, 65537, -65529, 0, 65538, -65528, 0, 131074, -65527, 0, 131074, -65526, 0, 65537, -65525, 0, 131073, -65524, 0, 131075, 65524, 0, 131072, 65525, 0, 65538, 65526, 0, 65538, 65527, 0, 65537, 65528, 0, 65537, 65529, 0, 131073, 65530, 0, 131074, 65531, 0, 131075, 4, 0, 65536, 5, 0, 131074, 6, 0, 131073, 7, 0, 65538, 8, 0, 65537, 9, 0, 65538, 10, 0, 131074, 11, 0, 65538, 12, 0, 65539, 131060, 0, 65536, 131061, 0, 65537, 131062, 0, 131073, 131063, 0, 65538, 131064, 0, 65538, 131065, 0, 65537, 131066, 0, 65538, 131067, 0, 65539, 65540, 0, 131072, 65541, 0, 65537, 65542, 0, 65537, 65543, 0, 65538, 65544, 0, 65538, 65545, 0, 131073, 65546, 0, 65538, 65547, 0, 65537, 65548, 0, 65539, 196596, 0, 65536, 196597, 0, 65537, 196598, 0, 65538, 196599, 0, 65537, 196600, 0, 131073, 196601, 0, 131074, 196602, 0, 65538, 196603, 0, 65539, 131076, 0, 131072, 131077, 0, 131074, 131078, 0, 131073, 131079, 0, 65538, 131080, 0, 131073, 131081, 0, 65538, 131082, 0, 131073, 131083, 0, 65537, 131084, 0, 65539, 262132, 0, 65536, 262133, 0, 131074, 262134, 0, 65537, 262135, 0, 65537, 262136, 0, 131074, 262137, 0, 131073, 262138, 0, 131073, 262139, 0, 131075, 196612, 0, 65536, 196613, 0, 131073, 196614, 0, 65538, 196615, 0, 65537, 196616, 0, 131074, 196617, 0, 131073, 196618, 0, 131074, 196619, 0, 131074, 196620, 0, 131075, 327668, 0, 131072, 327669, 0, 65537, 327670, 0, 131074, 327671, 0, 131073, 327672, 0, 131074, 327673, 0, 65537, 327674, 0, 65537, 327675, 0, 131077, 327676, 0, 1, 327677, 0, 2, 327678, 0, 2, 327679, 0, 2, 262144, 0, 2, 262145, 0, 1, 262146, 0, 2, 262147, 0, 1, 262148, 0, 131076, 262149, 0, 131074, 262150, 0, 131074, 262151, 0, 65538, 262152, 0, 65537, 262153, 0, 131074, 262154, 0, 131074, 262155, 0, 65537, 262156, 0, 65539, 393204, 0, 196608, 393205, 0, 196609, 393206, 0, 196609, 393207, 0, 196609, 393208, 0, 196610, 393209, 0, 196609, 393210, 0, 196610, 393211, 0, 196609, 393212, 0, 196609, 393213, 0, 196610, 393214, 0, 196609, 393215, 0, 196610, 327680, 0, 196610, 327681, 0, 196610, 327682, 0, 196609, 327683, 0, 196610, 327684, 0, 196610, 327685, 0, 196610, 327686, 0, 196609, 327687, 0, 196610, 327688, 0, 196609, 327689, 0, 196609, 327690, 0, 196610, 327691, 0, 196609, 327692, 0, 196611 )
+
+[node name="Player" parent="." instance=ExtResource( 2 )]
+visible = false
+position = Vector2( 20, 30 )
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 12 )
+
+[node name="AudioStreamPlayer2D2" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 11 )
+
+[node name="AudioStreamPlayer2D3" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 13 )
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2( 0, 7 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource( 1 )
+
+[node name="Area2D2" type="Area2D" parent="."]
+position = Vector2( 0, -10 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
+shape = SubResource( 1 )
+
+[node name="NextLevel" parent="." instance=ExtResource( 7 )]
+position = Vector2( 28, 28 )
+next_scene = "res://Scenes/World/Stages/World.tscn"
+
+[node name="lightgem" parent="." instance=ExtResource( 9 )]
+visible = false
+frame = 0
+
+[node name="powergem" parent="." instance=ExtResource( 8 )]
+visible = false
+
+[node name="BUbbles" parent="." instance=ExtResource( 14 )]
+position = Vector2( 0, 42 )
+amount = 30
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "light"
+anims/light = SubResource( 2 )
+anims/show = SubResource( 3 )
+
+[node name="Light2D" type="Light2D" parent="."]
+texture = ExtResource( 6 )
+
+[node name="Control" parent="." instance=ExtResource( 3 )]
+pause_mode = 2
+visible = false

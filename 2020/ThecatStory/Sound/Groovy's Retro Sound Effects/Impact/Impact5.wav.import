@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Impact5.wav-d9a95e7f5900d624df8c21e3425cb2c8.sample"
+
+[deps]
+
+source_file="res://Sound/Groovy's Retro Sound Effects/Impact/Impact5.wav"
+dest_files=[ "res://.import/Impact5.wav-d9a95e7f5900d624df8c21e3425cb2c8.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

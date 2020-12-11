@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Shoot6.wav-df990d32ce4e4f1ed04310939290f8cd.sample"
+
+[deps]
+
+source_file="res://Sound/Groovy's Retro Sound Effects/Shoot/Shoot6.wav"
+dest_files=[ "res://.import/Shoot6.wav-df990d32ce4e4f1ed04310939290f8cd.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

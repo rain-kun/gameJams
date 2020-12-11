@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/zapsplat_fantasy_magical_musical_glisando_004_46176.ogg-361284bfcb5d2e0361aabcb33373ce32.oggstr"
+
+[deps]
+
+source_file="res://Sound/BGSounds/zapsplat_fantasy_magical_musical_glisando_004_46176.ogg"
+dest_files=[ "res://.import/zapsplat_fantasy_magical_musical_glisando_004_46176.ogg-361284bfcb5d2e0361aabcb33373ce32.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

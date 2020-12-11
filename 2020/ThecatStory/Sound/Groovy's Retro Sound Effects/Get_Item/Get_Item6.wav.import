@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Get_Item6.wav-b702a7ea06722b7cb4ba7f7a8239a578.sample"
+
+[deps]
+
+source_file="res://Sound/Groovy's Retro Sound Effects/Get_Item/Get_Item6.wav"
+dest_files=[ "res://.import/Get_Item6.wav-b702a7ea06722b7cb4ba7f7a8239a578.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Jump6.wav-d4429c6be29f0f43605413227f2c5456.sample"
+
+[deps]
+
+source_file="res://Sound/Groovy's Retro Sound Effects/Jump/Jump6.wav"
+dest_files=[ "res://.import/Jump6.wav-d4429c6be29f0f43605413227f2c5456.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

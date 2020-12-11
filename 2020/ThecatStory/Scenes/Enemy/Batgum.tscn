@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Scenes/Player/catjam.png" type="Texture" id=1]
+[ext_resource path="res://Scripts/Enemy/Batgum.gd" type="Script" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 0.906592, 0.883845 )
+
+[node name="Batgum" type="Area2D"]
+collision_layer = 2
+collision_mask = 4
+script = ExtResource( 2 )
+speed = 20
+hit_vale = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 15.1442, 5.12437, 1.79917, 1.79917 )
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 5.0
+[connection signal="body_entered" from="." to="." method="_on_Batgum_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

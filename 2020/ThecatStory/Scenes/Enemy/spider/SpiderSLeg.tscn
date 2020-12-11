@@ -1,0 +1,52 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scenes/Enemy/spider.png" type="Texture" id=1]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 1.91863
+
+[node name="SpiderSLeg" type="Node2D"]
+__meta__ = {
+"_edit_ik_": true
+}
+
+[node name="highest" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+offset = Vector2( 50, 5 )
+region_enabled = true
+region_rect = Rect2( 24.5821, 121.026, 109.569, 37.4476 )
+__meta__ = {
+"_edit_bone_": true,
+"_edit_ik_": true
+}
+
+[node name="middle" type="Sprite" parent="highest"]
+position = Vector2( 95, 0 )
+texture = ExtResource( 1 )
+offset = Vector2( 40, -3 )
+region_enabled = true
+region_rect = Rect2( 174.279, 110.84, 105.036, 39.7919 )
+__meta__ = {
+"_edit_bone_": true
+}
+
+[node name="lowest" type="Sprite" parent="highest/middle"]
+position = Vector2( 85, 0 )
+texture = ExtResource( 1 )
+offset = Vector2( 45, 0 )
+region_enabled = true
+region_rect = Rect2( 325.728, 121.373, 98.936, 19.9775 )
+__meta__ = {
+"_edit_bone_": true
+}
+
+[node name="Position2D" type="Position2D" parent="highest/middle/lowest"]
+position = Vector2( 92.8863, 8.63144 )
+__meta__ = {
+"_edit_bone_": true
+}
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="highest/middle/lowest/Position2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="highest/middle/lowest/Position2D/KinematicBody2D"]
+shape = SubResource( 1 )

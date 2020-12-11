@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/WhatsApp Audio 2020-08-07 at 4.57.43 PM.ogg-d997f6790c5097c744e4b0751baa02be.oggstr"
+
+[deps]
+
+source_file="res://Sound/BGSounds/WhatsApp Audio 2020-08-07 at 4.57.43 PM.ogg"
+dest_files=[ "res://.import/WhatsApp Audio 2020-08-07 at 4.57.43 PM.ogg-d997f6790c5097c744e4b0751baa02be.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
